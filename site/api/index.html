@@ -40,7 +40,71 @@
 
       <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul>
-                <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
+                <li class="toctree-l1"><a class="reference internal" href="..">Overview</a>
+                </li>
+              </ul>
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="./">API</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#multilayer-display">Multilayer display</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#display_graphpath_to_file-ax-kwargs">display_graph(path_to_file, ax, **kwargs)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#parameters">Parameters</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#keyword-arguments-kwargs">Keyword Arguments (**kwargs)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#examples">Examples</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#metrics-distribution">Metrics distribution</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#display_statspath_to_file-ax-kwargs">display_stats(path_to_file, ax, **kwargs)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#parameters_1">Parameters</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#keyword-arguments-kwargs_1">Keyword Arguments (**kwargs)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#examples_1">Examples</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#animation">Animation</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#display_animationpath_to_file-parent_framenone-kwargs">display_animation(path_to_file, parent_frame=None, **kwargs)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#parameters_2">Parameters</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#keyword-arguments-kwargs_2">Keyword Arguments (**kwargs)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#returns">Returns</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#example">Example</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#temporal_layout">Temporal_layout</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#plot_temporal_layoutpath_to_file-axnone-kwargs">plot_temporal_layout(path_to_file, ax=None, **kwargs)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#parameters_3">Parameters</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#keyword-arguments-kwargs_3">Keyword Arguments (**kwargs)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#example_1">Example</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#further-analysis-examples">Further analysis examples</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#community-detection">community detection</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#rich-club-analysis">Rich club analysis</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
                 </li>
               </ul>
               <ul>
@@ -52,55 +116,7 @@
                 </li>
               </ul>
               <ul>
-                <li class="toctree-l1"><a class="reference internal" href="../settings/">Settings</a>
-                </li>
-              </ul>
-              <ul class="current">
-                <li class="toctree-l1 current"><a class="reference internal current" href="./">API</a>
-    <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#display_graphpath_to_file-kwargs">display_graph(path_to_file, **kwargs)</a>
-        <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#parameters">Parameters</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#returns">Returns</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#example">Example</a>
-    </li>
-        </ul>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#display_statspath_to_file-kwargs">display_stats(path_to_file, **kwargs)</a>
-        <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#parameters_1">Parameters</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#returns_1">Returns</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#example_1">Example</a>
-    </li>
-        </ul>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#display_animationpath_to_file-kwargs">display_animation(path_to_file, **kwargs)</a>
-        <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#parameters_2">Parameters</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#returns_2">Returns</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#example_2">Example</a>
-    </li>
-        </ul>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#plot_temporal_layoutpath_to_file-axnone-percentage_threshold00-mnnnone-avg_graphfalse-affinitytrue-rm_fb_loopstrue-mutualtrue-rm_indextrue-kwargs">plot_temporal_layout(path_to_file, ax=None, percentage_threshold=0.0, mnn=None, avg_graph=False, affinity=True, rm_fb_loops=True, mutual=True, rm_index=True, **kwargs)</a>
-        <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#parameters_3">Parameters</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#returns_3">Returns</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#example_3">Example</a>
-    </li>
-        </ul>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#notes">Notes</a>
-    </li>
-    </ul>
+                <li class="toctree-l1"><a class="reference internal" href="../settings/">GUI settings</a>
                 </li>
               </ul>
       </div>
@@ -127,11 +143,12 @@
             <div class="section" itemprop="articleBody">
               
                 <h1 id="temporal-graph-visualization-api-reference">Temporal Graph Visualization – API Reference</h1>
-<p>This module provides utilities for <strong>visualizing, analyzing, and animating temporal graphs</strong>.<br />
+<p>Here we detail the functions shown in the <a href="index">overview</a> for <strong>visualizing, analyzing, and animating temporal graphs</strong>.<br />
 You can explore your data interactively through the GUI (<code>python -m tempgraphviz.main_gui</code>) or directly use the functions below.</p>
 <hr />
-<h2 id="display_graphpath_to_file-kwargs"><code>display_graph(path_to_file, **kwargs)</code></h2>
-<p>Visualizes a single temporal graph layer or an aggregated view of the network.</p>
+<h2 id="multilayer-display">Multilayer display</h2>
+<h3 id="display_graphpath_to_file-ax-kwargs"><code>display_graph(path_to_file, ax, **kwargs)</code></h3>
+<p>Visualizes a temporal graph layer as a multilayer view or an aggregated view. Supports node coloring and sizing based on various metrics, edge scaling, and multilayer graph display.</p>
 <h3 id="parameters"><strong>Parameters</strong></h3>
 <table>
 <thead>
@@ -144,8 +161,13 @@ You can explore your data interactively through the GUI (<code>python -m tempgra
 <tbody>
 <tr>
 <td><code>path_to_file</code></td>
-<td><code>str</code></td>
-<td>Path to the input file containing the temporal graph data.</td>
+<td><code>str</code> or <code>list[str]</code></td>
+<td>Path or list of paths to the input CSV files containing the temporal graph data.</td>
+</tr>
+<tr>
+<td><code>ax</code></td>
+<td><code>matplotlib.axes.Axes</code></td>
+<td>Axis to plot the graph onto.</td>
 </tr>
 <tr>
 <td><code>percentage_threshold</code></td>
@@ -155,12 +177,12 @@ You can explore your data interactively through the GUI (<code>python -m tempgra
 <tr>
 <td><code>mnn</code></td>
 <td><code>int</code> or <code>None</code>, optional</td>
-<td>Number of mutual nearest neighbors to include.</td>
+<td>Number of mutual nearest neighbors to use for graph cutting.</td>
 </tr>
 <tr>
 <td><code>mutual</code></td>
 <td><code>bool</code>, optional</td>
-<td>If <code>True</code>, keeps only mutual connections.</td>
+<td>If <code>True</code>, keeps only mutual connections. This is only used if mnn is provided.</td>
 </tr>
 <tr>
 <td><code>avg_graph</code></td>
@@ -170,35 +192,133 @@ You can explore your data interactively through the GUI (<code>python -m tempgra
 <tr>
 <td><code>affinity</code></td>
 <td><code>bool</code>, optional</td>
-<td>If <code>True</code>, uses affinity weights instead of distances.</td>
+<td>If <code>True</code>, interprets edge values as affinities; if <code>False</code>, as distances.</td>
 </tr>
 <tr>
-<td><code>node_metric</code></td>
-<td><code>str</code>, optional</td>
-<td>Node sizing metric (e.g., <code>"degree"</code>, <code>"strength"</code>).</td>
-</tr>
-<tr>
-<td><code>node_cmap</code></td>
-<td><code>matplotlib colormap</code>, optional</td>
-<td>Node color map.</td>
-</tr>
-<tr>
-<td><code>scale_edge_width</code></td>
+<td><code>rm_fb_loops</code></td>
 <td><code>bool</code>, optional</td>
-<td>Whether to scale edge thickness by edge weight.</td>
+<td>If <code>True</code>, removes self-loops in the graph display.</td>
+</tr>
+<tr>
+<td><code>rm_index</code></td>
+<td><code>bool</code>, optional</td>
+<td>Whether to remove first column and row of the input csv files. Default <code>True</code>.</td>
 </tr>
 </tbody>
 </table>
-<h3 id="returns"><strong>Returns</strong></h3>
-<p><code>matplotlib.axes.Axes</code> — Axis with the plotted graph.</p>
-<h3 id="example"><strong>Example</strong></h3>
+<h3 id="keyword-arguments-kwargs"><strong>Keyword Arguments (<code>**kwargs</code>)</strong></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>node_metric</code></td>
+<td><code>str</code></td>
+<td>Metric for sizing and coloring nodes. Options: <code>"strength"</code>, <code>"betweenness"</code>, <code>"closeness"</code>, <code>"eigenvector centrality"</code>, <code>"page rank"</code>, <code>"hub score"</code>, <code>"authority score"</code>, <code>"rich-club"</code>, <code>"k-core"</code>.</td>
+</tr>
+<tr>
+<td><code>layout</code></td>
+<td><code>str</code></td>
+<td>Graph layout to use (see igraph layouts). Default <code>"fr"</code>.</td>
+</tr>
+<tr>
+<td><code>node_labels</code></td>
+<td><code>list[str]</code> or <code>bool</code></td>
+<td>Node labels to display, or <code>True</code> to read from file.</td>
+</tr>
+<tr>
+<td><code>return_ig</code></td>
+<td><code>bool</code></td>
+<td>Whether or not to return a instance of igraph.Graph instead of plotting</td>
+</tr>
+<tr>
+<td><code>node_size</code></td>
+<td><code>int</code></td>
+<td>Default node size.</td>
+</tr>
+<tr>
+<td><code>edge_width</code></td>
+<td><code>int</code></td>
+<td>Default edge width.</td>
+</tr>
+<tr>
+<td><code>scale_edge_width</code></td>
+<td><code>bool</code></td>
+<td>If <code>True</code>, scales edge width according to edge weights.</td>
+</tr>
+<tr>
+<td><code>between_layer_edges</code></td>
+<td><code>bool</code></td>
+<td>If <code>True</code>, draws edges between layers in multilayer graphs.</td>
+</tr>
+<tr>
+<td><code>show_planes</code></td>
+<td><code>bool</code>, optional</td>
+<td>If <code>True</code>, shows layers as separate planes in 3D view.</td>
+</tr>
+<tr>
+<td><code>edge_cmap</code></td>
+<td><code>matplotlib colormap</code></td>
+<td>Colormap for edges. Default <code>Greys</code>.</td>
+</tr>
+<tr>
+<td><code>node_cmap</code></td>
+<td><code>matplotlib colormap</code></td>
+<td>Colormap for nodes. Default <code>Reds</code> for multilayer, <code>black</code> otherwise.</td>
+</tr>
+<tr>
+<td><code>deg</code></td>
+<td><code>int</code></td>
+<td>Degree parameter used for <code>"rich-club"</code> or <code>"k-core"</code> node metrics.</td>
+</tr>
+<tr>
+<td><code>idx</code></td>
+<td><code>list[int]</code></td>
+<td>Cluster indices for coloring node frames.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="examples">Examples</h3>
 <pre><code class="language-python">from tempgraphviz import display_graph
+import matplotlib.pyplot as plt
 
-display_graph(&quot;data/temporal_graph.npy&quot;, node_metric=&quot;degree&quot;, node_cmap=&quot;viridis&quot;)
+#Example data provided with the package
+path = &quot;..\\..\\data\\nosemaze\\both_cohorts_1days\\G10\\&quot;
+file1 = &quot;interactions_resD1_01.csv&quot;
+file2 = &quot;interactions_resD1_02.csv&quot;
+file3 = &quot;interactions_resD1_03.csv&quot;
+file4 = &quot;interactions_resD1_04.csv&quot;
+file5 = &quot;interactions_resD1_05.csv&quot;
+
+# multilayer stack view
+f = plt.Figure()
+fig, ax = plt.subplots(1, 1)
+ax = fig.add_subplot(111, projection='3d')
+display_graph([path+file1, path+file2, path+file3, path+file4, path+file5], ax, mnn = None, deg = 3, percentage_threshold = 0,
+              node_metric = &quot;none&quot;, mutual = True, idx = [], node_size = 5, edge_width = 2, show_planes = True,
+              scale_edge_width = True, between_layer_edges = True, rm_index = True)
+plt.title(&quot;Stacked view of 5 experimental days&quot;)
+plt.show()
+
+ # Averaged graph view: calling the 'display_graph' function with avg_graph = True as argument    
+f = plt.Figure()
+fig, ax = plt.subplots(1, 1)
+display_graph([path+file1, path+file2, path+file3, path+file4, path+file5], ax, mnn = None, deg = 0, percentage_threshold = 0,
+              node_metric = &quot;none&quot;, mutual = True, idx = [], node_size = 5, edge_width = 2, avg_graph = True,
+              scale_edge_width = True, between_layer_edges = False, rm_index = True,
+              node_labels = False, show_planes = True, edge_cmap = cm.Greys, node_cmap = cm.Greens)
+plt.title(&quot;Averaged graph over 5 days&quot;)
+plt.show()
 </code></pre>
 <hr />
-<h2 id="display_statspath_to_file-kwargs"><code>display_stats(path_to_file, **kwargs)</code></h2>
-<p>Plots key statistics (e.g., degree, density, clustering) across time for the temporal graph.</p>
+<h2 id="metrics-distribution">Metrics distribution</h2>
+<h3 id="display_statspath_to_file-ax-kwargs"><code>display_stats(path_to_file, ax, **kwargs)</code></h3>
+<p>Displays histograms of node or edge metrics for a temporal graph.</p>
 <h3 id="parameters_1"><strong>Parameters</strong></h3>
 <table>
 <thead>
@@ -211,36 +331,117 @@ display_graph(&quot;data/temporal_graph.npy&quot;, node_metric=&quot;degree&quot
 <tbody>
 <tr>
 <td><code>path_to_file</code></td>
-<td><code>str</code></td>
-<td>Path to temporal graph data file.</td>
+<td><code>str</code> or <code>list[str]</code></td>
+<td>Path or list of paths to CSV files containing the temporal graph data.</td>
+</tr>
+<tr>
+<td><code>ax</code></td>
+<td><code>matplotlib.axes.Axes</code></td>
+<td>Axis to plot the histogram onto.</td>
 </tr>
 <tr>
 <td><code>percentage_threshold</code></td>
 <td><code>float</code>, optional</td>
-<td>Edge threshold for filtering.</td>
+<td>Edge-weight threshold below which edges are ignored. Default <code>0.0</code>.</td>
 </tr>
 <tr>
-<td><code>metrics</code></td>
-<td><code>list[str]</code>, optional</td>
-<td>List of metrics to compute (e.g., <code>["degree", "density"]</code>).</td>
+<td><code>mnn</code></td>
+<td><code>int</code> or <code>None</code>, optional</td>
+<td>Number of mutual nearest neighbors to consider.</td>
 </tr>
 <tr>
-<td><code>show_plot</code></td>
+<td><code>mutual</code></td>
 <td><code>bool</code>, optional</td>
-<td>If <code>True</code>, displays the plot immediately.</td>
+<td>If <code>True</code>, keeps only mutual connections.</td>
+</tr>
+<tr>
+<td><code>avg_graph</code></td>
+<td><code>bool</code>, optional</td>
+<td>If <code>True</code>, computes metrics on the time-averaged graph.</td>
+</tr>
+<tr>
+<td><code>affinity</code></td>
+<td><code>bool</code>, optional</td>
+<td>If <code>True</code>, treats edge values as affinities; if <code>False</code>, as distances.</td>
+</tr>
+<tr>
+<td><code>node_metric</code></td>
+<td><code>str</code>, optional</td>
+<td>Metric to compute for nodes. Options: <code>"strength"</code>, <code>"betweenness"</code>, <code>"closeness"</code>, <code>"eigenvector centrality"</code>, <code>"page rank"</code>, <code>"hub score"</code>, <code>"authority score"</code>, <code>"rich-club"</code>. Default <code>"none"</code> (shows edge values).</td>
+</tr>
+<tr>
+<td><code>stacked</code></td>
+<td><code>bool</code>, optional</td>
+<td>Whether to stack histograms for multilayer graphs. Default <code>True</code>.</td>
+</tr>
+<tr>
+<td><code>rm_index</code></td>
+<td><code>bool</code>, optional</td>
+<td>Whether to remove first column and row of the input csv files. Default <code>True</code>.</td>
+</tr>
+<tr>
+<td><code>bins</code></td>
+<td><code>int</code>, optional</td>
+<td>Number of bins for the histogram. Default <code>10</code>.</td>
 </tr>
 </tbody>
 </table>
-<h3 id="returns_1"><strong>Returns</strong></h3>
-<p><code>dict</code> — Computed statistics for each metric over time.</p>
-<h3 id="example_1"><strong>Example</strong></h3>
+<h3 id="keyword-arguments-kwargs_1"><strong>Keyword Arguments (<code>**kwargs</code>)</strong></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>deg</code></td>
+<td><code>int</code></td>
+<td>Degree parameter for <code>"rich-club"</code> node metrics.</td>
+</tr>
+<tr>
+<td><code>show_legend</code></td>
+<td><code>bool</code></td>
+<td>Whether to show legend when plotting multilayer graphs.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="examples_1">Examples</h3>
 <pre><code class="language-python">from tempgraphviz import display_stats
+import matplotlib.pyplot as plt
 
-stats = display_stats(&quot;data/temporal_graph.npy&quot;, metrics=[&quot;density&quot;, &quot;clustering&quot;])
+#Example data provided with the package
+path = &quot;..\\..\\data\\nosemaze\\both_cohorts_1days\\G10\\&quot;
+file1 = &quot;interactions_resD1_01.csv&quot;
+file2 = &quot;interactions_resD1_02.csv&quot;
+file3 = &quot;interactions_resD1_03.csv&quot;
+file4 = &quot;interactions_resD1_04.csv&quot;
+file5 = &quot;interactions_resD1_05.csv&quot;
+
+# Stacked histogram plot example, via Stacked = True  
+f = plt.Figure()
+fig, ax = plt.subplots(1, 1)
+display_stats([path+file1, path+file2, path+file3, path+file4, path+file5], ax, mnn = None, deg = 3, percentage_threshold = 0,
+              node_metric = &quot;strength&quot;, mutual = True, idx = [], node_size = 5, edge_width = 2, bins = 5,
+              scale_edge_width = True, between_layer_edges = False, rm_index = True, show_planes = True, show_legend = False)
+plt.title(&quot;Strength histogram\n color codes for time (in days)&quot;)
+plt.show()
+
+# Side by side histogram plot example, using Stacked = false  
+f = plt.Figure()
+fig, ax = plt.subplots(1, 1)
+display_stats([path+file1, path+file2, path+file3, path+file4, path+file5], ax, mnn = None, deg = 3, percentage_threshold = 0,
+              node_metric = &quot;strength&quot;, mutual = True, idx = [], node_size = 5, edge_width = 2, bins = 5, stacked = False,
+              scale_edge_width = True, between_layer_edges = False, rm_index = True, show_planes = True, show_legend = False)
+plt.title(&quot;Strength histogram\n color codes for time (in days)&quot;)
+plt.show()
 </code></pre>
 <hr />
-<h2 id="display_animationpath_to_file-kwargs"><code>display_animation(path_to_file, **kwargs)</code></h2>
-<p>Generates an animation showing how the graph evolves over time.</p>
+<h2 id="animation">Animation</h2>
+<h3 id="display_animationpath_to_file-parent_framenone-kwargs"><code>display_animation(path_to_file, parent_frame=None, **kwargs)</code></h3>
+<p>Creates an animated visualization of a temporal graph across its layers, optionally using node metrics for sizing and coloring.</p>
 <h3 id="parameters_2"><strong>Parameters</strong></h3>
 <table>
 <thead>
@@ -253,42 +454,150 @@ stats = display_stats(&quot;data/temporal_graph.npy&quot;, metrics=[&quot;densit
 <tbody>
 <tr>
 <td><code>path_to_file</code></td>
-<td><code>str</code></td>
-<td>Path to temporal graph file.</td>
+<td><code>str</code> or <code>list[str]</code></td>
+<td>Path or list of paths to CSV files containing the temporal graph data.</td>
 </tr>
 <tr>
-<td><code>fps</code></td>
-<td><code>int</code>, optional</td>
-<td>Frames per second for the animation.</td>
+<td><code>parent_frame</code></td>
+<td><code>matplotlib.figure.Figure</code> or <code>None</code>, optional</td>
+<td>If provided, the animation is embedded in this figure; otherwise a new figure is created.</td>
 </tr>
 <tr>
-<td><code>save_path</code></td>
-<td><code>str</code>, optional</td>
-<td>If provided, saves the animation to the given path (e.g., <code>.mp4</code>).</td>
+<td><code>percentage_threshold</code></td>
+<td><code>float</code>, optional</td>
+<td>Edge-weight threshold below which edges are ignored. Default <code>0.0</code>.</td>
 </tr>
 <tr>
-<td><code>node_cmap</code></td>
-<td><code>matplotlib colormap</code>, optional</td>
-<td>Node color scheme.</td>
+<td><code>mnn</code></td>
+<td><code>int</code> or <code>None</code>, optional</td>
+<td>Number of mutual nearest neighbors for graph cut.</td>
 </tr>
 <tr>
-<td><code>scale_edge_width</code></td>
+<td><code>mutual</code></td>
 <td><code>bool</code>, optional</td>
-<td>Scale edge thickness by edge weight.</td>
+<td>If <code>True</code>, only mutual connections are kept.</td>
+</tr>
+<tr>
+<td><code>affinity</code></td>
+<td><code>bool</code>, optional</td>
+<td>If <code>True</code>, treats edge values as affinities; if <code>False</code>, as distances.</td>
+</tr>
+<tr>
+<td><code>rm_fb_loops</code></td>
+<td><code>bool</code>, optional</td>
+<td>If <code>True</code>, removes self-loops from the graph.</td>
+</tr>
+<tr>
+<td><code>rm_index</code></td>
+<td><code>bool</code>, optional</td>
+<td>Whether to remove first column and row of the input csv files. Default <code>True</code>.</td>
 </tr>
 </tbody>
 </table>
-<h3 id="returns_2"><strong>Returns</strong></h3>
-<p><code>matplotlib.animation.FuncAnimation</code> — Animation object.</p>
-<h3 id="example_2"><strong>Example</strong></h3>
+<h3 id="keyword-arguments-kwargs_2"><strong>Keyword Arguments (<code>**kwargs</code>)</strong></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>node_metric</code></td>
+<td><code>str</code></td>
+<td>Metric used for node sizing. Options: <code>"strength"</code>, <code>"betweenness"</code>, <code>"closeness"</code>, <code>"eigenvector centrality"</code>, <code>"page rank"</code>, <code>"hub score"</code>, <code>"authority score"</code>, <code>"rich-club"</code>, <code>"k-core"</code>, <code>"none"</code>. Default <code>"none"</code>.</td>
+</tr>
+<tr>
+<td><code>node_cmap</code></td>
+<td><code>matplotlib colormap</code></td>
+<td>Colormap for nodes. Default black if <code>"none"</code>.</td>
+</tr>
+<tr>
+<td><code>edge_cmap</code></td>
+<td><code>matplotlib colormap</code></td>
+<td>Colormap for edges. Default <code>Greys</code>.</td>
+</tr>
+<tr>
+<td><code>node_size</code></td>
+<td><code>float</code></td>
+<td>Base size for nodes. Default <code>15</code>.</td>
+</tr>
+<tr>
+<td><code>edge_width</code></td>
+<td><code>float</code></td>
+<td>Base width for edges. Default <code>5</code>.</td>
+</tr>
+<tr>
+<td><code>scale_edge_width</code></td>
+<td><code>bool</code></td>
+<td>Whether to scale edge widths by weight. Default <code>False</code>.</td>
+</tr>
+<tr>
+<td><code>idx</code></td>
+<td><code>list[int]</code></td>
+<td>Node cluster indices for coloring.</td>
+</tr>
+<tr>
+<td><code>layout</code></td>
+<td><code>str</code></td>
+<td>Graph layout (e.g., <code>"fr"</code>, <code>"kk"</code>). Default <code>"fr"</code>.</td>
+</tr>
+<tr>
+<td><code>layer_labels</code></td>
+<td><code>list[str]</code></td>
+<td>Labels for each layer.</td>
+</tr>
+<tr>
+<td><code>deg</code></td>
+<td><code>int</code></td>
+<td>Degree parameter for <code>"rich-club"</code> or <code>"k-core"</code> node metrics.</td>
+</tr>
+<tr>
+<td><code>interframe</code></td>
+<td><code>int</code></td>
+<td>Time in milliseconds between frames. Default <code>200</code>.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="returns"><strong>Returns</strong></h3>
+<p><code>matplotlib.animation.FuncAnimation</code> — Animation object.<br />
+If <code>parent_frame</code> is provided, also returns <code>(figure, axes)</code>.</p>
+<h3 id="example"><strong>Example</strong></h3>
 <pre><code class="language-python">from tempgraphviz import display_animation
+import matplotlib.pyplot as plt
 
-display_animation(&quot;data/temporal_graph.npy&quot;, fps=10, save_path=&quot;animation.mp4&quot;)
+# Example data provided with the package
+path = &quot;..\\..\\data\\nosemaze\\both_cohorts_1days\\G10\\&quot;
+file1 = &quot;interactions_resD1_01.csv&quot;
+file2 = &quot;interactions_resD1_02.csv&quot;
+file3 = &quot;interactions_resD1_03.csv&quot;
+file4 = &quot;interactions_resD1_04.csv&quot;
+file5 = &quot;interactions_resD1_05.csv&quot;
+file6 = &quot;interactions_resD1_06.csv&quot;
+file7 = &quot;interactions_resD1_07.csv&quot;
+file8 = &quot;interactions_resD1_08.csv&quot;
+file9 = &quot;interactions_resD1_09.csv&quot;
+file10 = &quot;interactions_resD1_10.csv&quot;
+file11 = &quot;interactions_resD1_11.csv&quot;
+file12 = &quot;interactions_resD1_12.csv&quot;
+file13 = &quot;interactions_resD1_13.csv&quot;
+file14 = &quot;interactions_resD1_14.csv&quot;
+
+files = [path+file1, path+file2, path+file3, path+file4, path+file5, path+file6, path+file7, path+file8, path+file9, path+file10,
+             path+file11, path+file12, path+file13, path+file14]
+anim = display_animation(files, root = None, mnn = None, deg = 0, 
+                  percentage_threshold = 0, layout = &quot;circle&quot;,
+              node_metric = &quot;strength&quot;, mutual = True, idx = [], node_size = 40, edge_width = 2,
+              scale_edge_width = False, between_layer_edges = False, node_labels = True, rm_index = True,
+              node_cmap = cm.Grays, edge_cmap = cm.Grays)
+anim.save(r&quot;your_path_to_save\interactions.gif&quot;, writer=&quot;pillow&quot;, fps=2) # replace your_path_to_save here
 </code></pre>
 <hr />
-<h2 id="plot_temporal_layoutpath_to_file-axnone-percentage_threshold00-mnnnone-avg_graphfalse-affinitytrue-rm_fb_loopstrue-mutualtrue-rm_indextrue-kwargs"><code>plot_temporal_layout(path_to_file, ax=None, percentage_threshold=0.0, mnn=None, avg_graph=False, affinity=True, rm_fb_loops=True, mutual=True, rm_index=True, **kwargs)</code></h2>
-<p>Displays the <strong>temporal layout</strong> of a graph, aligning nodes vertically across time and plotting edges between them.<br />
-Each column represents a time step, and each row corresponds to a node.</p>
+<h2 id="temporal_layout">Temporal_layout</h2>
+<h3 id="plot_temporal_layoutpath_to_file-axnone-kwargs"><code>plot_temporal_layout(path_to_file, ax=None, **kwargs)</code></h3>
+<p>Plots a temporal network in the temporal layout view, aligning nodes vertically across timesteps to visualize the evolution of connectivity.</p>
 <h3 id="parameters_3"><strong>Parameters</strong></h3>
 <table>
 <thead>
@@ -301,107 +610,168 @@ Each column represents a time step, and each row corresponds to a node.</p>
 <tbody>
 <tr>
 <td><code>path_to_file</code></td>
-<td><code>str</code></td>
-<td>Path to temporal graph file.</td>
+<td><code>str</code> or <code>list[str]</code></td>
+<td>Path or list of paths to CSV files containing the temporal graph data.</td>
 </tr>
 <tr>
 <td><code>ax</code></td>
-<td><code>matplotlib.axes.Axes</code>, optional</td>
-<td>Axis to draw on. If <code>None</code>, a new figure is created.</td>
+<td><code>matplotlib.axes.Axes</code> or <code>None</code>, optional</td>
+<td>Axis to plot on. If <code>None</code>, a new figure and axis are created.</td>
 </tr>
 <tr>
 <td><code>percentage_threshold</code></td>
 <td><code>float</code>, optional</td>
-<td>Edge-weight threshold for filtering.</td>
+<td>Edge-weight threshold below which edges are ignored. Default <code>0.0</code>.</td>
 </tr>
 <tr>
 <td><code>mnn</code></td>
 <td><code>int</code> or <code>None</code>, optional</td>
-<td>Mutual nearest neighbors parameter.</td>
-</tr>
-<tr>
-<td><code>avg_graph</code></td>
-<td><code>bool</code>, optional</td>
-<td>Whether to use the average graph for node ordering.</td>
-</tr>
-<tr>
-<td><code>affinity</code></td>
-<td><code>bool</code>, optional</td>
-<td>If <code>True</code>, treats data as affinities (not distances).</td>
-</tr>
-<tr>
-<td><code>rm_fb_loops</code></td>
-<td><code>bool</code>, optional</td>
-<td>Remove feedback (self) loops.</td>
+<td>Number of mutual nearest neighbors for graph cut.</td>
 </tr>
 <tr>
 <td><code>mutual</code></td>
 <td><code>bool</code>, optional</td>
-<td>Keep only mutual connections.</td>
+<td>If <code>True</code>, keeps only mutual connections.</td>
+</tr>
+<tr>
+<td><code>avg_graph</code></td>
+<td><code>bool</code>, optional</td>
+<td>If <code>True</code>, uses the average graph to determine node ordering.</td>
+</tr>
+<tr>
+<td><code>affinity</code></td>
+<td><code>bool</code>, optional</td>
+<td>If <code>True</code>, treats edge values as affinities; if <code>False</code>, as distances.</td>
+</tr>
+<tr>
+<td><code>rm_fb_loops</code></td>
+<td><code>bool</code>, optional</td>
+<td>If <code>True</code>, removes self-loops from the graph.</td>
 </tr>
 <tr>
 <td><code>rm_index</code></td>
 <td><code>bool</code>, optional</td>
-<td>Whether to remove node index labels.</td>
-</tr>
-<tr>
-<td><code>node_labels</code></td>
-<td><code>bool</code>, optional</td>
-<td>Display node labels.</td>
-</tr>
-<tr>
-<td><code>node_size</code></td>
-<td><code>float</code>, optional</td>
-<td>Default node size.</td>
-</tr>
-<tr>
-<td><code>node_metric</code></td>
-<td><code>str</code>, optional</td>
-<td>Node size metric.</td>
-</tr>
-<tr>
-<td><code>node_cmap</code></td>
-<td><code>matplotlib colormap</code> or <code>"none"</code>, optional</td>
-<td>Node color map.</td>
-</tr>
-<tr>
-<td><code>edge_width</code></td>
-<td><code>float</code>, optional</td>
-<td>Default edge width.</td>
-</tr>
-<tr>
-<td><code>edge_cmap</code></td>
-<td><code>matplotlib colormap</code>, optional</td>
-<td>Edge color map.</td>
-</tr>
-<tr>
-<td><code>scale_edge_width</code></td>
-<td><code>bool</code>, optional</td>
-<td>Scale edge width by edge weight.</td>
+<td>Whether to remove first column and row of the input csv files. Default <code>True</code>.</td>
 </tr>
 </tbody>
 </table>
-<h3 id="returns_3"><strong>Returns</strong></h3>
-<p><code>matplotlib.axes.Axes</code> — Axis containing the plotted temporal layout.</p>
-<h3 id="example_3"><strong>Example</strong></h3>
+<h3 id="keyword-arguments-kwargs_3"><strong>Keyword Arguments (<code>**kwargs</code>)</strong></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>node_metric</code></td>
+<td><code>str</code></td>
+<td>Metric for node sizing and coloring. Options: <code>"strength"</code>, <code>"betweenness"</code>, <code>"closeness"</code>, <code>"eigenvector centrality"</code>, <code>"page rank"</code>, <code>"hub score"</code>, <code>"authority score"</code>, <code>"rich-club"</code>, <code>"k-core"</code>.</td>
+</tr>
+<tr>
+<td><code>node_cmap</code></td>
+<td><code>matplotlib colormap</code></td>
+<td>Colormap for nodes. Default black if <code>"none"</code>.</td>
+</tr>
+<tr>
+<td><code>edge_cmap</code></td>
+<td><code>matplotlib colormap</code></td>
+<td>Colormap for edges. Default <code>Greys</code>.</td>
+</tr>
+<tr>
+<td><code>node_size</code></td>
+<td><code>float</code></td>
+<td>Base size for nodes. Default <code>15</code>.</td>
+</tr>
+<tr>
+<td><code>edge_width</code></td>
+<td><code>float</code></td>
+<td>Base width for edges. Default <code>5</code>.</td>
+</tr>
+<tr>
+<td><code>scale_edge_width</code></td>
+<td><code>bool</code></td>
+<td>Whether to scale edge widths by weight. Default <code>False</code>.</td>
+</tr>
+<tr>
+<td><code>deg</code></td>
+<td><code>int</code></td>
+<td>Parameter for <code>"rich-club"</code> or <code>"k-core"</code> node metrics.</td>
+</tr>
+<tr>
+<td><code>node_labels</code></td>
+<td><code>list[str]</code> or <code>bool</code></td>
+<td>List of labels for nodes or <code>True</code> to read from file.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="example_1"><strong>Example</strong></h3>
 <pre><code class="language-python">from tempgraphviz import plot_temporal_layout
+import matplotlib.pyplot as plt
 
-plot_temporal_layout(&quot;data/temporal_graph.npy&quot;, node_labels=True, node_metric=&quot;degree&quot;)
+# Example data provided with the package
+path = &quot;..\\..\\data\\nosemaze\\both_cohorts_1days\\G10\\&quot;
+file1 = &quot;interactions_resD1_01.csv&quot;
+file2 = &quot;interactions_resD1_02.csv&quot;
+file3 = &quot;interactions_resD1_03.csv&quot;
+file4 = &quot;interactions_resD1_04.csv&quot;
+file5 = &quot;interactions_resD1_05.csv&quot;
+file6 = &quot;interactions_resD1_06.csv&quot;
+file7 = &quot;interactions_resD1_07.csv&quot;
+paths = [path+file1, path+file2,path+file3, path+file4, 
+            path+file5,  path+file6,  path+file7]    
+
+fig, ax = plt.subplots(1, 1, figsize=(12, 6))
+plot_temporal_layout(paths, ax, mnn = 5, deg = 3,
+                      node_size = 15, edge_width = 5, between_layer_edges = False, 
+                      rm_fb_loops=True, node_labels = False, rm_index = True,
+                      node_metric = &quot;strength&quot;, node_cmap = cm.coolwarm, edge_cmap = cm.coolwarm, scale_edge_width = True)
+plt.title(&quot;Temporal layout over 7 experimental days&quot;)
+plt.show()
+
 </code></pre>
 <hr />
-<h2 id="notes">Notes</h2>
-<ul>
-<li>All visualization functions accept <code>**kwargs</code> for fine-tuning visual properties.</li>
-<li>The module supports <code>.npy</code>, <code>.csv</code>, or <code>.txt</code> temporal adjacency matrices.</li>
-<li>For interactive use, run:
-  <code>bash
-  python -m tempgraphviz.main_gui</code></li>
-</ul>
+<h2 id="further-analysis-examples">Further analysis examples</h2>
+<p>Here we show additional examples of analysis using the functions above</p>
+<pre><code class="language-python">from tempgraphviz import plot_temporal_layout
+import matplotlib.pyplot as plt
+
+# Example data provided with the package
+datapath = &quot;..\\..\\data\\nosemaze\\both_cohorts_1days\\G10\\&quot;
+file1 = &quot;interactions_resD1_01.csv&quot;
+file2 = &quot;interactions_resD1_02.csv&quot;
+file3 = &quot;interactions_resD1_03.csv&quot;
+</code></pre>
+<h4 id="community-detection">community detection</h4>
+<pre><code>c = community_clustering([datapath+file1, datapath+file2, datapath+file3, datapath+file4], algorithm = &quot;infomap&quot;, mnn = 4, mutual = True, affinity = True)
+# pass the detected communities to the multilayer stack display function via the idx argument
+f = plt.Figure()
+fig, ax = plt.subplots(1, 1)
+ax = fig.add_subplot(111, projection='3d')
+display_graph([path+file1, path+file2, path+file3, path+file4], ax, mnn = None, deg = 3, percentage_threshold = 0,
+              node_metric = &quot;none&quot;, mutual = True, idx = [], node_size = 5, edge_width = 2, show_planes = True,
+              scale_edge_width = True, between_layer_edges = True, rm_index = True, idx = c)
+plt.title(&quot;Stacked view of 5 experimental days&quot;)
+plt.show()
+</code></pre>
+<h4 id="rich-club-analysis">Rich club analysis</h4>
+<pre><code>fig, axs = plt.subplots(5, 1, figsize=(4, 8)) #putting all results directly on same figure
+for i in range(5):
+    file = &quot;interactions_resD3_&quot;+str(i+1)+&quot;.csv&quot;
+    display_graph([datapath+file], axs[i], mnn = 3, node_metric = &quot;rich-club&quot;, deg = 3, mutual = True,
+                      layout = &quot;circle&quot;, node_size = 12, node_labels = None, edge_width = 1.5, scale_edge_width = False)
+
+axs[0].set_title(&quot;Rich-club (RC) analysis:\nEach graph represent an experimental day,\nBold nodes are part of RC\nSome nodes are consistently part of RC&quot;)
+plt.show()
+</code></pre>
               
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="../settings/" class="btn btn-neutral float-left" title="Settings"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href=".." class="btn btn-neutral float-left" title="Overview"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../metrics/" class="btn btn-neutral float-right" title="Metrics">Next <span class="icon icon-circle-arrow-right"></span></a>
     </div>
 
   <hr/>
@@ -424,8 +794,10 @@ plot_temporal_layout(&quot;data/temporal_graph.npy&quot;, node_labels=True, node
   <span class="rst-current-version" data-toggle="rst-current-version">
     
     
-      <span><a href="../settings/" style="color: #fcfcfc">&laquo; Previous</a></span>
+      <span><a href=".." style="color: #fcfcfc">&laquo; Previous</a></span>
     
+    
+      <span><a href="../metrics/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>

@@ -12,7 +12,7 @@
     
       <script>
         // Current page data
-        var mkdocs_page_name = "Home";
+        var mkdocs_page_name = "Overview";
         var mkdocs_page_input_path = "index.md";
         var mkdocs_page_url = null;
       </script>
@@ -40,17 +40,15 @@
 
       <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul class="current">
-                <li class="toctree-l1 current"><a class="reference internal current" href=".">Home</a>
+                <li class="toctree-l1 current"><a class="reference internal current" href=".">Overview</a>
     <ul class="current">
     <li class="toctree-l2"><a class="reference internal" href="#installation">Installation</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#to-simplify-data-exploration-the-package-provides-a-gui-accessible-with-python-m-tempgraphvizmain_gui-you-can-also-call-its-functions-directly-through-the-api">To simplify data exploration, the package provides a GUI accessible with python -m tempgraphviz.main_gui. You can also call its functions directly through the API.</a>
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#quickstart">Quickstart</a>
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#main-functionalities">Main Functionalities</a>
         <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#structure-visualization">Structure visualization</a>
+    <li class="toctree-l3"><a class="reference internal" href="#multilayer-stack">Multilayer stack</a>
     </li>
     <li class="toctree-l3"><a class="reference internal" href="#metrics-distribution">Metrics distribution</a>
     </li>
@@ -66,6 +64,10 @@
                 </li>
               </ul>
               <ul>
+                <li class="toctree-l1"><a class="reference internal" href="api/">API</a>
+                </li>
+              </ul>
+              <ul>
                 <li class="toctree-l1"><a class="reference internal" href="metrics/">Metrics</a>
                 </li>
               </ul>
@@ -74,11 +76,7 @@
                 </li>
               </ul>
               <ul>
-                <li class="toctree-l1"><a class="reference internal" href="settings/">Settings</a>
-                </li>
-              </ul>
-              <ul>
-                <li class="toctree-l1"><a class="reference internal" href="api/">API</a>
+                <li class="toctree-l1"><a class="reference internal" href="settings/">GUI settings</a>
                 </li>
               </ul>
       </div>
@@ -95,7 +93,7 @@
         <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
     <li><a href="." class="icon icon-home" aria-label="Docs"></a> &raquo;</li>
-      <li class="breadcrumb-item active">Home</li>
+      <li class="breadcrumb-item active">Overview</li>
     <li class="wy-breadcrumbs-aside">
     </li>
   </ul>
@@ -105,14 +103,14 @@
             <div class="section" itemprop="articleBody">
               
                 <h1 id="tempgraphviz">TempGraphViz</h1>
-<p>An interactive GUI designed for exploring, analyzing, and visualizing <strong>temporal graphs</strong>.</p>
+<p>A Python package for exploring, analyzing, and visualizing <strong>temporal graphs</strong>.</p>
 <hr />
 <h2 id="installation">Installation</h2>
 <p>TempGraphViz is part of the Python Package Index and can be installed via <code>pip install tempnetviz</code>. </p>
-<h2 id="to-simplify-data-exploration-the-package-provides-a-gui-accessible-with-python-m-tempgraphvizmain_gui-you-can-also-call-its-functions-directly-through-the-api">To simplify data exploration, the package provides a GUI accessible with python -m tempgraphviz.main_gui. You can also call its functions directly through the <a href="API.md">API</a>.</h2>
+<p>To simplify data exploration, the package provides a GUI accessible with <code>python -m tempgraphviz.main_gui</code>. You can also call its functions directly through the <a href="api">API</a>.</p>
+<hr />
 <h2 id="quickstart">Quickstart</h2>
-<p>Your data should be stored in a single folder, as <strong>.csv files</strong>. Each .csv file representing a graph at a given time point of the analysis.
-Run <code>python -m tempnetviz.main_gui</code>. Then:</p>
+<p>Your data should be stored in a single folder, as <strong>.csv files</strong>. Each .csv file representing a graph at a given time point of the analysis. To start the GUI, run <code>python -m tempnetviz.main_gui</code>. Then:</p>
 <ol>
 <li>Click <strong>Open</strong> in the GUI to select the folder containing your <code>.csv</code> files.</li>
 <li>Use the <strong>Sub-graph selector</strong> to choose one or multiple layers to visualize or analyze.</li>
@@ -120,19 +118,20 @@ Run <code>python -m tempnetviz.main_gui</code>. Then:</p>
    You can apply a <strong>graph cut</strong> (edge pruning) for better readability on large graphs.</li>
 <li>Switch between <strong>Graph</strong>, <strong>Histogram</strong>, and <strong>Animation</strong> views to gain different insights.</li>
 </ol>
-<p>You can apply aesthetic changes (e.g. edge/nodes widths, colors...) to the results via the <a href="settings/">Settings</a> button.</p>
+<p>You can apply aesthetic changes (e.g. edge/nodes widths, colors...) to the results via the <a href="settings">Settings</a> button.</p>
 <p><img alt="image info" src="quickstart_numbered.png" /></p>
 <hr />
 <h2 id="main-functionalities">Main Functionalities</h2>
-<h3 id="structure-visualization">Structure visualization</h3>
-<p>Once you have selected the input files to be visualized, the default view will be a 3D stack that lets you see how connections evolve as a function of time.
-You can also compute various <a href="metrics/">metrics</a> that quantify the importance of the nodes in the graph. More important nodes will be displayed larger as others.
-In this example, a colormap was also applied via the <a href="settings/">settings</a> to make the results more explicit.</p>
+<p>Below, we show the main visualization tools available. The <a href="api">API</a> section comes with details and examples on how to use each of these functions within Python scripts.</p>
+<h3 id="multilayer-stack">Multilayer stack</h3>
+<p>This is the default view in the GUI: a 3D stack that lets you see how connections evolve as a function of time.
+You can also compute various <a href="metrics">metrics</a> that quantify the importance of the nodes in the graph. More important nodes will be displayed larger as others.
+In this example, a colormap was also applied to make the results more explicit. This can be via the <a href="settings">settings</a> button in the GUI or via the <code>node_cmap</code> and <code>edge_cmap</code> arguments of the <code>display_graph</code> function.</p>
 <p><img src="https://github.com/CNelias/TempNetVizDocs.github.io/blob/main/3D_view.png?raw=true" alt="Graph Structure" width="50%"/></p>
 <h3 id="metrics-distribution">Metrics distribution</h3>
 <p>Visualize how metrics evolve over time using histograms. By default, the different time steps are stacked on top of each other for easier comparison.
 In this example, deep blue corresponds to early times and deep red to the last datapoints. You can also plot each time step side by side by changing the corresponding
-option in the <a href="settings/">settings</a>.</p>
+option in the <a href="settings">settings</a> or by calling the function <code>display_stats</code> with <code>stacked = False</code>.</p>
 <p><img src="https://github.com/CNelias/TempNetVizDocs.github.io/blob/main/histo_view.png?raw=true" alt="histogram" width="80%"/></p>
 <h3 id="graph-animation">Graph animation</h3>
 <p>It is also possible to display the time evolution of the graph as an animation</p>
@@ -159,7 +158,7 @@ Importantly, mice with impaired cortical oxytocin signaling were unable to enter
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="metrics/" class="btn btn-neutral float-right" title="Metrics">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="api/" class="btn btn-neutral float-right" title="API">Next <span class="icon icon-circle-arrow-right"></span></a>
     </div>
 
   <hr/>
@@ -183,7 +182,7 @@ Importantly, mice with impaired cortical oxytocin signaling were unable to enter
     
     
     
-      <span><a href="metrics/" style="color: #fcfcfc">Next &raquo;</a></span>
+      <span><a href="api/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>
@@ -203,5 +202,5 @@ Importantly, mice with impaired cortical oxytocin signaling were unable to enter
 
 <!--
 MkDocs version : 1.5.2
-Build Date UTC : 2025-11-11 11:22:59.292412+00:00
+Build Date UTC : 2025-11-11 18:54:28.354996+00:00
 -->
