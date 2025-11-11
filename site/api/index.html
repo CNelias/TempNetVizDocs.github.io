@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>API - TempNetViz documentation</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "API";
+        var mkdocs_page_input_path = "api.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> TempNetViz documentation
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../metrics/">Metrics</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../graph_cut/">Graph cut</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../settings/">Settings</a>
+                </li>
+              </ul>
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="./">API</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#display_graphpath_to_file-kwargs">display_graph(path_to_file, **kwargs)</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#parameters">Parameters</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#returns">Returns</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#example">Example</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#display_statspath_to_file-kwargs">display_stats(path_to_file, **kwargs)</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#parameters_1">Parameters</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#returns_1">Returns</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#example_1">Example</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#display_animationpath_to_file-kwargs">display_animation(path_to_file, **kwargs)</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#parameters_2">Parameters</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#returns_2">Returns</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#example_2">Example</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#plot_temporal_layoutpath_to_file-axnone-percentage_threshold00-mnnnone-avg_graphfalse-affinitytrue-rm_fb_loopstrue-mutualtrue-rm_indextrue-kwargs">plot_temporal_layout(path_to_file, ax=None, percentage_threshold=0.0, mnn=None, avg_graph=False, affinity=True, rm_fb_loops=True, mutual=True, rm_index=True, **kwargs)</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#parameters_3">Parameters</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#returns_3">Returns</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#example_3">Example</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#notes">Notes</a>
+    </li>
+    </ul>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">TempNetViz documentation</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a> &raquo;</li>
+      <li class="breadcrumb-item active">API</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="temporal-graph-visualization-api-reference">Temporal Graph Visualization – API Reference</h1>
+<p>This module provides utilities for <strong>visualizing, analyzing, and animating temporal graphs</strong>.<br />
+You can explore your data interactively through the GUI (<code>python -m tempgraphviz.main_gui</code>) or directly use the functions below.</p>
+<hr />
+<h2 id="display_graphpath_to_file-kwargs"><code>display_graph(path_to_file, **kwargs)</code></h2>
+<p>Visualizes a single temporal graph layer or an aggregated view of the network.</p>
+<h3 id="parameters"><strong>Parameters</strong></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>path_to_file</code></td>
+<td><code>str</code></td>
+<td>Path to the input file containing the temporal graph data.</td>
+</tr>
+<tr>
+<td><code>percentage_threshold</code></td>
+<td><code>float</code>, optional</td>
+<td>Edge-weight threshold below which edges are removed. Default <code>0.0</code>.</td>
+</tr>
+<tr>
+<td><code>mnn</code></td>
+<td><code>int</code> or <code>None</code>, optional</td>
+<td>Number of mutual nearest neighbors to include.</td>
+</tr>
+<tr>
+<td><code>mutual</code></td>
+<td><code>bool</code>, optional</td>
+<td>If <code>True</code>, keeps only mutual connections.</td>
+</tr>
+<tr>
+<td><code>avg_graph</code></td>
+<td><code>bool</code>, optional</td>
+<td>If <code>True</code>, displays the time-averaged graph.</td>
+</tr>
+<tr>
+<td><code>affinity</code></td>
+<td><code>bool</code>, optional</td>
+<td>If <code>True</code>, uses affinity weights instead of distances.</td>
+</tr>
+<tr>
+<td><code>node_metric</code></td>
+<td><code>str</code>, optional</td>
+<td>Node sizing metric (e.g., <code>"degree"</code>, <code>"strength"</code>).</td>
+</tr>
+<tr>
+<td><code>node_cmap</code></td>
+<td><code>matplotlib colormap</code>, optional</td>
+<td>Node color map.</td>
+</tr>
+<tr>
+<td><code>scale_edge_width</code></td>
+<td><code>bool</code>, optional</td>
+<td>Whether to scale edge thickness by edge weight.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="returns"><strong>Returns</strong></h3>
+<p><code>matplotlib.axes.Axes</code> — Axis with the plotted graph.</p>
+<h3 id="example"><strong>Example</strong></h3>
+<pre><code class="language-python">from tempgraphviz import display_graph
+
+display_graph(&quot;data/temporal_graph.npy&quot;, node_metric=&quot;degree&quot;, node_cmap=&quot;viridis&quot;)
+</code></pre>
+<hr />
+<h2 id="display_statspath_to_file-kwargs"><code>display_stats(path_to_file, **kwargs)</code></h2>
+<p>Plots key statistics (e.g., degree, density, clustering) across time for the temporal graph.</p>
+<h3 id="parameters_1"><strong>Parameters</strong></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>path_to_file</code></td>
+<td><code>str</code></td>
+<td>Path to temporal graph data file.</td>
+</tr>
+<tr>
+<td><code>percentage_threshold</code></td>
+<td><code>float</code>, optional</td>
+<td>Edge threshold for filtering.</td>
+</tr>
+<tr>
+<td><code>metrics</code></td>
+<td><code>list[str]</code>, optional</td>
+<td>List of metrics to compute (e.g., <code>["degree", "density"]</code>).</td>
+</tr>
+<tr>
+<td><code>show_plot</code></td>
+<td><code>bool</code>, optional</td>
+<td>If <code>True</code>, displays the plot immediately.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="returns_1"><strong>Returns</strong></h3>
+<p><code>dict</code> — Computed statistics for each metric over time.</p>
+<h3 id="example_1"><strong>Example</strong></h3>
+<pre><code class="language-python">from tempgraphviz import display_stats
+
+stats = display_stats(&quot;data/temporal_graph.npy&quot;, metrics=[&quot;density&quot;, &quot;clustering&quot;])
+</code></pre>
+<hr />
+<h2 id="display_animationpath_to_file-kwargs"><code>display_animation(path_to_file, **kwargs)</code></h2>
+<p>Generates an animation showing how the graph evolves over time.</p>
+<h3 id="parameters_2"><strong>Parameters</strong></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>path_to_file</code></td>
+<td><code>str</code></td>
+<td>Path to temporal graph file.</td>
+</tr>
+<tr>
+<td><code>fps</code></td>
+<td><code>int</code>, optional</td>
+<td>Frames per second for the animation.</td>
+</tr>
+<tr>
+<td><code>save_path</code></td>
+<td><code>str</code>, optional</td>
+<td>If provided, saves the animation to the given path (e.g., <code>.mp4</code>).</td>
+</tr>
+<tr>
+<td><code>node_cmap</code></td>
+<td><code>matplotlib colormap</code>, optional</td>
+<td>Node color scheme.</td>
+</tr>
+<tr>
+<td><code>scale_edge_width</code></td>
+<td><code>bool</code>, optional</td>
+<td>Scale edge thickness by edge weight.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="returns_2"><strong>Returns</strong></h3>
+<p><code>matplotlib.animation.FuncAnimation</code> — Animation object.</p>
+<h3 id="example_2"><strong>Example</strong></h3>
+<pre><code class="language-python">from tempgraphviz import display_animation
+
+display_animation(&quot;data/temporal_graph.npy&quot;, fps=10, save_path=&quot;animation.mp4&quot;)
+</code></pre>
+<hr />
+<h2 id="plot_temporal_layoutpath_to_file-axnone-percentage_threshold00-mnnnone-avg_graphfalse-affinitytrue-rm_fb_loopstrue-mutualtrue-rm_indextrue-kwargs"><code>plot_temporal_layout(path_to_file, ax=None, percentage_threshold=0.0, mnn=None, avg_graph=False, affinity=True, rm_fb_loops=True, mutual=True, rm_index=True, **kwargs)</code></h2>
+<p>Displays the <strong>temporal layout</strong> of a graph, aligning nodes vertically across time and plotting edges between them.<br />
+Each column represents a time step, and each row corresponds to a node.</p>
+<h3 id="parameters_3"><strong>Parameters</strong></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>path_to_file</code></td>
+<td><code>str</code></td>
+<td>Path to temporal graph file.</td>
+</tr>
+<tr>
+<td><code>ax</code></td>
+<td><code>matplotlib.axes.Axes</code>, optional</td>
+<td>Axis to draw on. If <code>None</code>, a new figure is created.</td>
+</tr>
+<tr>
+<td><code>percentage_threshold</code></td>
+<td><code>float</code>, optional</td>
+<td>Edge-weight threshold for filtering.</td>
+</tr>
+<tr>
+<td><code>mnn</code></td>
+<td><code>int</code> or <code>None</code>, optional</td>
+<td>Mutual nearest neighbors parameter.</td>
+</tr>
+<tr>
+<td><code>avg_graph</code></td>
+<td><code>bool</code>, optional</td>
+<td>Whether to use the average graph for node ordering.</td>
+</tr>
+<tr>
+<td><code>affinity</code></td>
+<td><code>bool</code>, optional</td>
+<td>If <code>True</code>, treats data as affinities (not distances).</td>
+</tr>
+<tr>
+<td><code>rm_fb_loops</code></td>
+<td><code>bool</code>, optional</td>
+<td>Remove feedback (self) loops.</td>
+</tr>
+<tr>
+<td><code>mutual</code></td>
+<td><code>bool</code>, optional</td>
+<td>Keep only mutual connections.</td>
+</tr>
+<tr>
+<td><code>rm_index</code></td>
+<td><code>bool</code>, optional</td>
+<td>Whether to remove node index labels.</td>
+</tr>
+<tr>
+<td><code>node_labels</code></td>
+<td><code>bool</code>, optional</td>
+<td>Display node labels.</td>
+</tr>
+<tr>
+<td><code>node_size</code></td>
+<td><code>float</code>, optional</td>
+<td>Default node size.</td>
+</tr>
+<tr>
+<td><code>node_metric</code></td>
+<td><code>str</code>, optional</td>
+<td>Node size metric.</td>
+</tr>
+<tr>
+<td><code>node_cmap</code></td>
+<td><code>matplotlib colormap</code> or <code>"none"</code>, optional</td>
+<td>Node color map.</td>
+</tr>
+<tr>
+<td><code>edge_width</code></td>
+<td><code>float</code>, optional</td>
+<td>Default edge width.</td>
+</tr>
+<tr>
+<td><code>edge_cmap</code></td>
+<td><code>matplotlib colormap</code>, optional</td>
+<td>Edge color map.</td>
+</tr>
+<tr>
+<td><code>scale_edge_width</code></td>
+<td><code>bool</code>, optional</td>
+<td>Scale edge width by edge weight.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="returns_3"><strong>Returns</strong></h3>
+<p><code>matplotlib.axes.Axes</code> — Axis containing the plotted temporal layout.</p>
+<h3 id="example_3"><strong>Example</strong></h3>
+<pre><code class="language-python">from tempgraphviz import plot_temporal_layout
+
+plot_temporal_layout(&quot;data/temporal_graph.npy&quot;, node_labels=True, node_metric=&quot;degree&quot;)
+</code></pre>
+<hr />
+<h2 id="notes">Notes</h2>
+<ul>
+<li>All visualization functions accept <code>**kwargs</code> for fine-tuning visual properties.</li>
+<li>The module supports <code>.npy</code>, <code>.csv</code>, or <code>.txt</code> temporal adjacency matrices.</li>
+<li>For interactive use, run:
+  <code>bash
+  python -m tempgraphviz.main_gui</code></li>
+</ul>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../settings/" class="btn btn-neutral float-left" title="Settings"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../settings/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

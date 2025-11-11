@@ -1,8 +1,9 @@
 site_name: TempNetViz documentation
 nav:
-  - Home: index.md
+  - Overview: index.md
+  - API: api.md
   - Metrics : metrics.md
   - Graph cut : graph_cut.md
-  - Settings: settings.md
+  - GUI settings: settings.md
 
 theme: readthedocs

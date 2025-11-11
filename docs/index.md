@@ -1,18 +1,17 @@
 # TempGraphViz
-An interactive GUI designed for exploring, analyzing, and visualizing **temporal graphs**.
+A Python package for exploring, analyzing, and visualizing **temporal graphs**.
 
 ---
 ## Installation
 
 TempGraphViz is part of the Python Package Index and can be installed via ```pip install tempnetviz```. 
 
-To start the GUI, simply run ```python -m tempgraphviz.main_gui```.
+To simplify data exploration, the package provides a GUI accessible with ```python -m tempgraphviz.main_gui```. You can also call its functions directly through the [API](api).
 
 ---
 
 ## Quickstart
-Your data should be stored in a single folder, as **.csv files**. Each .csv file representing a graph at a given time point of the analysis.
-Run ```python -m tempnetviz.main_gui```. Then:
+Your data should be stored in a single folder, as **.csv files**. Each .csv file representing a graph at a given time point of the analysis. To start the GUI, run ```python -m tempnetviz.main_gui```. Then:
 
 1. Click **Open** in the GUI to select the folder containing your `.csv` files.
 2. Use the **Sub-graph selector** to choose one or multiple layers to visualize or analyze.
@@ -20,25 +19,25 @@ Run ```python -m tempnetviz.main_gui```. Then:
    You can apply a **graph cut** (edge pruning) for better readability on large graphs.
 4. Switch between **Graph**, **Histogram**, and **Animation** views to gain different insights.
 
-You can apply aesthetic changes (e.g. edge/nodes widths, colors...) to the results via the [Settings](settings.md) button.
-
+You can apply aesthetic changes (e.g. edge/nodes widths, colors...) to the results via the [Settings](settings) button.
 
 ![image info](quickstart_numbered.png)
 
 ---
 ## Main Functionalities
+Below, we show the main visualization tools available. The [API](api) section comes with details and examples on how to use each of these functions within Python scripts.
 
-### Structure visualization
-Once you have selected the input files to be visualized, the default view will be a 3D stack that lets you see how connections evolve as a function of time.
-You can also compute various [metrics](metrics.md) that quantify the importance of the nodes in the graph. More important nodes will be displayed larger as others.
-In this example, a colormap was also applied via the [settings](settings.md) to make the results more explicit.
+### Multilayer stack
+This is the default view in the GUI: a 3D stack that lets you see how connections evolve as a function of time.
+You can also compute various [metrics](metrics) that quantify the importance of the nodes in the graph. More important nodes will be displayed larger as others.
+In this example, a colormap was also applied to make the results more explicit. This can be via the [settings](settings) button in the GUI or via the ```node_cmap``` and ```edge_cmap``` arguments of the ```display_graph``` function.
 
 <img src="https://github.com/CNelias/TempNetVizDocs.github.io/blob/main/3D_view.png?raw=true" alt="Graph Structure" width="50%"/>
 
 ### Metrics distribution
 Visualize how metrics evolve over time using histograms. By default, the different time steps are stacked on top of each other for easier comparison.
 In this example, deep blue corresponds to early times and deep red to the last datapoints. You can also plot each time step side by side by changing the corresponding
-option in the [settings](settings.md).
+option in the [settings](settings) or by calling the function ```display_stats``` with ```stacked = False```.
 
 <img src="https://github.com/CNelias/TempNetVizDocs.github.io/blob/main/histo_view.png?raw=true" alt="histogram" width="80%"/>
 
