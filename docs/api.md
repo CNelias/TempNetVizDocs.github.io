@@ -29,7 +29,6 @@ Visualizes a temporal graph layer as a multilayer view or an aggregated view. Su
 | `node_metric` | `str` | Metric for sizing and coloring nodes. Options: `"strength"`, `"betweenness"`, `"closeness"`, `"eigenvector centrality"`, `"page rank"`, `"hub score"`, `"authority score"`, `"rich-club"`, `"k-core"`. |
 | `layout` | `str` | Graph layout to use (see igraph layouts). Default `"fr"`. |
 | `node_labels` | `list[str]` or `bool` | Node labels to display, or `True` to read from file. |
-| `return_ig` | `bool` | Whether or not to return a instance of igraph.Graph instead of plotting |
 | `node_size` | `int`| Default node size. |
 | `edge_width` | `int` | Default edge width. |
 | `scale_edge_width` | `bool` | If `True`, scales edge width according to edge weights. |
